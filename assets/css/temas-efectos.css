@@ -1,0 +1,128 @@
+
+
+    /* Tema oscuro */
+    .tema-oscuro {
+        --primary-color: #1a1a1a;
+        --secondary-color: #2c3e50;
+        --light-bg: #2c3e50;
+        --dark-text: #ecf0f1;
+        background: linear-gradient(135deg, #2c3e50 0%, #1a1a1a 100%);
+        color: var(--dark-text);
+    }
+
+    .tema-oscuro .card {
+        background: rgba(44, 62, 80, 0.9);
+        color: var(--dark-text);
+    }
+
+    .tema-oscuro .table {
+        background: rgba(44, 62, 80, 0.9);
+        color: var(--dark-text);
+    }
+
+    /* Efectos de conexión */
+    .sin-conexion::before {
+        content: 'Sin conexión a internet';
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: #e74c3c;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        z-index: 9999;
+        font-weight: bold;
+    }
+
+    .sin-conexion {
+        padding-top: 50px;
+    }
+
+    /* Animaciones de carga */
+    .loading {
+        opacity: 0.6;
+        pointer-events: none;
+    }
+
+    .loading::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 30px;
+        height: 30px;
+        margin: -15px 0 0 -15px;
+        border: 3px solid #3498db;
+        border-top: 3px solid transparent;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+
+    /* Efectos de hover mejorados */
+    .balota:hover {
+        transform: scale(1.1) rotate(5deg);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    }
+
+    .balota:active {
+        transform: scale(0.95);
+    }
+
+    /* Responsive mejorado */
+    @media (max-width: 576px) {
+        .container, .container-fluid {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 80%;
+            height: 100vh;
+            transition: left 0.3s ease;
+            z-index: 1050;
+        }
+        
+        .sidebar.show {
+            left: 0;
+        }
+        
+        .stats-card {
+            margin-bottom: 15px;
+        }
+        
+        .btn-group .btn {
+            padding: 5px 8px;
+            font-size: 12px;
+        }
+    }
+
+    /* Transiciones suaves */
+    * {
+        transition: all 0.3s ease;
+    }
+
+    /* Print styles */
+    @media print {
+        .sidebar, .navbar, .btn, .modal {
+            display: none !important;
+        }
+        
+        .container-fluid {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .card {
+            border: 1px solid #000;
+            box-shadow: none;
+        }
+    }
