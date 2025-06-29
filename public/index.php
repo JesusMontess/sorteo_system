@@ -1,4 +1,5 @@
 <?php
+require_once '../config/constants.php';
 // Iniciar sesión de forma segura
 if (session_status() == PHP_SESSION_NONE) {
     session_start();

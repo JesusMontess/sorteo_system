@@ -5,17 +5,18 @@
  */
 
 // ===== CONFIGURACIÓN DE RUTAS =====
-define('BASE_URL', 'http://localhost/sorteo_system/');
+// Por:
+define('BASE_URL', 'http://localhost/sorteo_system/public/');
 define('ASSETS_URL', BASE_URL . 'assets/');
 define('UPLOADS_PATH', __DIR__ . '/../uploads/');
 define('LOGS_PATH', __DIR__ . '/../logs/');
 
 // ===== CONFIGURACIÓN DE BASE DE DATOS =====
-define('DB_HOST', 'localhost');
-define('DB_NAME', 'bdd_sorteo_cmaicao');
-define('DB_USER', 'root');
-define('DB_PASS', '');
-define('DB_CHARSET', 'utf8mb4');
+// define('DB_HOST', 'localhost');
+// define('DB_NAME', 'bdd_sorteo_cmaicao');
+// define('DB_USER', 'root');
+// define('DB_PASS', '');
+// define('DB_CHARSET', 'utf8mb4');
 
 // ===== ESTADOS DEL SISTEMA =====
 define('ESTADO_ACTIVO', 1);

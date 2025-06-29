@@ -1,3 +1,6 @@
+<?php
+require_once '../config/constants.php'; // o la ruta correcta
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -10,8 +13,10 @@
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <!-- CSS personalizado -->
-    <link href="<?php echo defined('ASSETS_PATH') ? ASSETS_PATH : '../assets'; ?>/css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="<?php echo ASSETS_URL; ?>css/styles.css">
+    <link rel="stylesheet" href="<?php echo ASSETS_URL; ?>css/temas-efectos.css">
 </head>
+
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
